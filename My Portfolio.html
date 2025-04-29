@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Portfolio</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9fafc;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #0077ff;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .intro {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .intro img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 4px solid #0077ff;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #0077ff;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-top: 60px;
+      color: #0077ff;
+      text-align: center;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #0077ff;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+    }
+
+    .contact-btn {
+      display: block;
+      margin: 40px auto;
+      text-align: center;
+      background: #0077ff;
+      color: white;
+      padding: 12px 28px;
+      text-decoration: none;
+      border-radius: 8px;
+      width: fit-content;
+      transition: background 0.3s;
+    }
+
+    .contact-btn:hover {
+      background: #005fcc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      background: #f0f2f5;
+      margin-top: 60px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      .subtitle { font-size: 1rem; }
+    }
+    /* Adjust image size for the projects */
+    .project-image {
+      width: 100%; /* Makes the image responsive */
+      max-width: 400px; /* Limits the max width to 400px */
+      height: auto; /* Keeps the aspect ratio intact */
+      border-radius: 8px;
+      object-fit: cover; /* Ensures the image covers the area without distortion */
+    }
+     /* Social Media Icons */
+     .socials {
+      margin-top: 20px;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 1rem;
+      color: #0077ff;
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: #005fcc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <section id="about" class="intro">
+      <img src="20250429_164847.jpg" alt="Profile Photo" />
+      <h1>Your Name</h1>
+      <div class="subtitle">Building Designer | Graphic Designer | Data Analyst</div>
+      <p>
+        I am a passionate building designer with expertise in creating innovative and sustainable architectural designs. As a graphic designer, I also specialize in branding and digital design. With a keen eye for detail and a deep understanding of design principles, I help clients bring their visions to life.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">My Design Projects</h2>
+      <div class="projects">
+
+         <!-- Building Design Project -->
+         <div class="card">
+            <img src="images/building-design.jpg" alt="Building Design Project" class="project-image" />
+            <h3>Modern Office Building</h3>
+            <p>This project involves a sleek, modern office building designed to optimize natural light and airflow.</p>
+            <a href="images/building-design.jpg" target="_blank">View Full Image</a>
+          </div>
+  
+          <!-- Graphic Design Project -->
+          <div class="card">
+            <img src="SLAY WITH ANN.jpg" alt="Graphic Design Project" class="project-image" />
+            <h3>Brand Identity for XYZ Corp</h3>
+            <p>This graphic design project includes a logo, business cards, and a brand identity for a corporate client.</p>
+            <a href="SLAY WITH ANN.jpg" target="_blank">View Full Image</a>
+          </div>
+  
+          <!-- 3D Model of Residential Building -->
+          <div class="card">
+            <img src="3 br bungalow flat - 6.jpg" alt="3D Model of Residential Building" class="project-image" />
+            <h3>3D Model of Residential Building</h3>
+            <p>A 3D model of a residential building designed for family living, emphasizing sustainable materials.</p>
+            <a href="3 br bungalow flat - 6.jpg" target="_blank">View Full Image</a>
+          </div>  
+
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <a href="mailto:chrischidi5527@gmail.com" class="contact-btn">Get in Touch</a>
+
+       <!-- Social Media Links -->
+       <div class="socials">
+        <a href="linkedin.com/in/christian-chinekeokwu-7214172b4" target="_blank">LinkedIn</a>
+        <a href="https://x.com/RYF_Classic" target="_blank">Twitter</a>
+        <a href="https://web.facebook.com/itz.erickson.9" target="_blank">Facebook</a>
+        <a href="wa.me/+2349132433082" target="_blank">WhatsApp</a>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Christian Chinekeokwu. All rights reserved.
+  </footer>
+
+</body>
+</html>
